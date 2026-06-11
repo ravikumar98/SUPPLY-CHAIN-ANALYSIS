@@ -21,7 +21,7 @@ A comprehensive data analysis project utilizing the *DataCo Global Smart Supply 
 - *Documentation*: Markdown, VS Code
 
 ## 🏗️ System Architecture
-mermaid
+```mermaid
 graph LR
     A[Raw DataCo CSV] --> B[Python ETL Script]
     B --> C{Data Cleaning}
@@ -29,6 +29,7 @@ graph LR
     D --> E[Metric Aggregation]
     E --> F[Performance Dashboard]
     F --> G[Visual Export .png]
+```
 
 ## 📊 Quantitative Results
 Based on the analysis of 180,519 rows:
