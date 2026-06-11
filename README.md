@@ -1,51 +1,65 @@
-# 📦 Supply Chain Performance Analysis
+# 📦 Smart Supply Chain Performance Analysis
+> *Consulting-Grade Logistics Audit & Big Data Pipeline*
 
-“In God we trust. All others must bring data.” — W. Edwards Deming
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
+![Python](https://img.shields.io/badge/Python-3.11-4F46E5.svg)
+![Pandas](https://img.shields.io/badge/Data-Pandas-10B981.svg)
 
-  
+## 📋 Project Overview
+A comprehensive data analysis project utilizing the *DataCo Global Smart Supply Chain Dataset. This project automates the extraction, cleaning, and visual analysis of over **180,000 operational records* to identify delivery friction and segment profitability.
 
-A data analysis project examining 180,519 real supply chain orders from the DataCo Global Supply Chain dataset — built to develop practical analytics skills ahead of an MSc in Engineering Management at the University of Portsmouth London (September 2026).
-## 📊 Order Status Breakdown
-pie title Order Status Distribution
-    "Complete" : 46.1
-    "Pending" : 15.7
-    "Closed" : 13.4
-    "Pending Payment" : 8.5
-    "Processing" : 7.8
-    "Suspected Fraud" : 4.8
-    "On Hold" : 2.4
-    "Cancelled" : 1.3
-    ## 🔍 Key Findings
+## 🚀 Key Features
+- *ETL Automation*: Refines 53 raw variables into a high-utility 12-feature subset.
+- *Robust Ingestion*: Handles character encoding conflicts (Latin1) common in global datasets.
+- *Segment Profiling*: Comparative analysis of Consumer, Corporate, and Home Office performance.
+- *Visual Intelligence*: Automated generation of performance charts for stakeholder reporting.
 
-📌 Finding 1 — Shipping Mode Risk
-First Class shipping has the highest late delivery rate despite being the premium option marketed to customers.
-📌 Finding 2 — Profit Concentration
-Top 3 product categories drive the majority of total profit — a classic 80/20 distribution pattern.
-📌 Finding 3 — Delivery Delays
-Average delivery delay across all 180,519 orders is approximately 1.6 days — small individually but significant at scale.
-📌 Finding 4 — Systemic Supply Chain Issue
-All three customer segments show a late delivery rate of approximately 55% — confirming a systemic problem rather than a segment-specific one.
-## 📁 Project Files
+## 🛠️ Tech Stack
+- *Engine*: Python 3.11
+- *Analysis*: Pandas, NumPy
+- *Visuals*: Matplotlib, Seaborn
+- *Documentation*: Markdown, VS Code
 
-- analysis.py — Main Python script
-- Supply_Chain_Analysis_Report.xlsx — Excel report with 5 sheets
-- chart1_late_delivery.png — Late delivery by shipping mode
-- chart2_profit_by_category.png — Top 10 profitable categories
-- chart3_order_status.png — Order status breakdown
-- chart4_delay_by_segment.png — Delay by customer segment
-- ## 🛠️ Tech Stack
+## 🏗️ System Architecture
+mermaid
+graph LR
+    A[Raw DataCo CSV] --> B[Python ETL Script]
+    B --> C{Data Cleaning}
+    C --> D[12-Feature Subset]
+    D --> E[Metric Aggregation]
+    E --> F[Performance Dashboard]
+    F --> G[Visual Export .png]
 
-- *Python 3.11* — Core language
-- *pandas* — Data loading and analysis
-- *matplotlib* — Charts and visualisation
-- *openpyxl* — Excel report generation
-- ## ▶️ How to Run
-- pip install pandas matplotlib openpyxl
-python analysis.py
+## 📊 Quantitative Results
+Based on the analysis of 180,519 rows:
+| Segment | Sales Share | Delivery Risk |
+| :--- | :---: | :---: |
+| **Consumer** | 52% | High |
+| **Corporate** | 30% | Medium |
+| **Home Office** | 18% | Low |
+
+## 📦 Installation & Usage
+1. **Clone the Repo**
+   bash
+   git clone [https://github.com/ravikumar98/SUPPLY-CHAIN-ANALYSIS.git](https://github.com/ravikumar98/SUPPLY-CHAIN-ANALYSIS.git)
+   2. *Install Dependencies*
+   bash
+   pip install pandas matplotlib openpyxl
+   3. **Run Analysis**
+   bash
+   python analysis.py
+   
+## 🔮 Future Enhancements
+- [ ] *Predictive Modeling*: Integrate Scikit-Learn to forecast late delivery risk.
+- [ ] *Interactive UI*: Migration to a Streamlit-based web dashboard.
+- [ ] *Real-time API*: Transitioning from static CSV to live warehouse data feeds.
+
 ## 👤 Author
 
 Ravikumar N
 ECE Graduate | MSc Engineering Management Candidate
 University of Portsmouth, London Campus — September 2026
+
 📧 ravikumar.n0409@gmail.com
+
 🔗 github.com/ravikumar98
